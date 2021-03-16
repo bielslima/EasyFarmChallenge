@@ -27,6 +27,7 @@ abstract class _ApplicationControllerBase with Store {
   void logout() {
     ExtendedNavigator.root
         .pushAndRemoveUntil(AppRoutes.loginView, (route) => false);
+    this.setHeaders({});
     this.setUser(null);
   }
 }

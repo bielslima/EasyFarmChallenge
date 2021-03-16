@@ -12,7 +12,7 @@ class HttpService {
   Map<String, dynamic> makeHeader() {
     ApplicationController appController = getIt<ApplicationController>();
     Map<String, dynamic> _headers = appController.headers;
-    // _headers['Content-type'] = 'application/x-www-form-urlencoded';
+    _headers['Content-type'] = 'application/json';
 
     return _headers;
   }
@@ -31,12 +31,12 @@ class HttpService {
   Future<Response> httpPost(String endpoint,
       {@required Map<String, dynamic> data}) async {
     final url = BASE_URL + endpoint;
-    print("POST => $url");
-    // final h = makeHeader();
-    // print(endpoint);
-    // print(data);
-    // print(h);
-
-    return _dioInstance.post(url, data: data);
+    return _dioInstance.post(
+      url,
+      data: data,
+      options: Options(
+        headers: makeHeader(),
+      ),
+    );
   }
 }

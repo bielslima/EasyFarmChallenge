@@ -20,9 +20,8 @@ abstract class _LoginControllerBase with Store {
   final ApplicationController _appController = getIt<ApplicationController>();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   TextEditingController txtEmail =
-      new TextEditingController(text: "testemobile@easyfarm.io");
-  TextEditingController txtSenha =
-      new TextEditingController(text: "teste@!mobile1");
+      new TextEditingController(text: "caio@eagro.ag");
+  TextEditingController txtSenha = new TextEditingController(text: "123456");
 
   @observable
   bool isLoading = false;

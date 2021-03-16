@@ -23,7 +23,9 @@ User _$UserFromJson(Map json) {
     phone: json['phone'] as String,
     tk: json['tk'] as String,
     point: json['point'] as String,
-    addons: (json['addons'] as List)?.map((e) => e as String)?.toList(),
+    addons: (json['addons'] as List)
+        ?.map((e) => e == null ? null : Addons.fromJson(e))
+        ?.toList(),
     roles: (json['roles'] as List)
         ?.map((e) => e == null
             ? null

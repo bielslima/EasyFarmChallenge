@@ -1,3 +1,4 @@
+import 'package:easy_farm/models/Addons.dart';
 import 'package:easy_farm/models/Roles.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -27,7 +28,7 @@ class User extends Equatable {
   final String phone;
   final String tk;
   final String point;
-  final List<String> addons;
+  final List<Addons> addons;
   final List<Roles> roles;
   final List<Farms> farms;
 

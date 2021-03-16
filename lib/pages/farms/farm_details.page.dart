@@ -19,247 +19,225 @@ class FarmDetails extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.all(8),
           children: [
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Id: ",
+            Row(
+              children: [
+                Text(
+                  "Id: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.id}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.id}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Name: ",
+            Row(
+              children: [
+                Text(
+                  "Name: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.name}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.name}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Area: ",
+            Row(
+              children: [
+                Text(
+                  "Area: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.area}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.area}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Owner: ",
+            Row(
+              children: [
+                Text(
+                  "Owner: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.owner}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.owner}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Has Perenial: ",
+            Row(
+              children: [
+                Text(
+                  "Has Perenial: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.hasPerenial}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.hasPerenial}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Default: ",
+            Row(
+              children: [
+                Text(
+                  "Default: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.idDefault}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.idDefault}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Latitude: ",
+            Row(
+              children: [
+                Text(
+                  "Latitude: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.latitude}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.latitude}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Longitude: ",
+            Row(
+              children: [
+                Text(
+                  "Longitude: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.longitude}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.longitude}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Productive Area: ",
+            Row(
+              children: [
+                Text(
+                  "Productive Area: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.productiveArea}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.productiveArea}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Farm Group Id: ",
+            Row(
+              children: [
+                Text(
+                  "Farm Group Id: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${farm.attributes.farmGroupId}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${farm.attributes.farmGroupId}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  Text(
-                    "Cultures: ",
+            Row(
+              children: [
+                Text(
+                  "Cultures: ",
+                  style: Theme.of(context).textTheme.headline6.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                ),
+                Expanded(
+                  child: Text(
+                    "${_buildCultures(farm.attributes.cultures)}",
                     style: Theme.of(context).textTheme.headline6.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                          color: Colors.grey,
                         ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "${_buildCultures(farm.attributes.cultures)}",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey,
-                          ),
-                    ),
-                  )
-                ],
-              ),
+                )
+              ],
             ),
           ],
         ),

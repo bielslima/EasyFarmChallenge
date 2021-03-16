@@ -21,8 +21,8 @@ class AuthImplRepository implements AuthRepository {
   Future<User> authUser(String email, String password) async {
     try {
       final Map<String, dynamic> _data = {
-        'email': email,
-        'password': password,
+        'email': email.toString(),
+        'password': password.toString(),
       };
 
       final Response _response =
@@ -33,9 +33,10 @@ class AuthImplRepository implements AuthRepository {
 
         _saveHeaders(_response.headers);
 
+        print("STATUS CODE: ${_response.statusCode}");
         // await _saveCredentials(Credentials.fromJson(_data));
-
-        return _parseUser(_result);
+        print(_result['data']);
+        return _parseUser(_result['data']);
       } else {
         return null;
       }
@@ -62,15 +63,10 @@ class AuthImplRepository implements AuthRepository {
   }
 
   void _saveHeaders(Headers headers) {
-    print(headers);
     Map<String, dynamic> _headers = {};
-    // print(headers['access-token'][0]);
-    // print(headers['uid'][0]);
-    // print(headers['client'][0]);
     _headers['access-token'] = headers['access-token'][0];
     _headers['uid'] = headers['uid'][0];
     _headers['client'] = headers['client'][0];
-    // print(_headers);
     appController.setHeaders(_headers);
   }
 
@@ -80,6 +76,6 @@ class AuthImplRepository implements AuthRepository {
   }
 
   User _parseUser(Map json) {
-    return User.fromJson(json['data']);
+    return User.fromJson(json);
   }
 }
